@@ -1,0 +1,9 @@
+.vscode
+.wttd
+.DS_Store
+.env
+.idea
+c.sh
+*.sqlite3
+*pyc
+__pycache__
