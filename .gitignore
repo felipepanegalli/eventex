@@ -7,3 +7,4 @@ c.sh
 *.sqlite3
 *pyc
 __pycache__
+staticfiles
