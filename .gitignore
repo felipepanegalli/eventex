@@ -8,3 +8,5 @@ c.sh
 *pyc
 __pycache__
 staticfiles
+*.ipynb
+.ipynb_checkpoints/
