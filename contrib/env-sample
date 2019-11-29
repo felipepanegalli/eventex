@@ -1,5 +1,5 @@
 # Conf Default do Projeto
-SECRET_KEY=
+SECRET_KEY=this_is_not_a_secret_key
 DEBUG=True
 ALLOWED_HOSTS=127.0.0.1, .locahost, localhost
 
