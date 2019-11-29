@@ -1,0 +1,24 @@
+# Conf Default do Projeto
+SECRET_KEY=
+DEBUG=True
+ALLOWED_HOSTS=127.0.0.1, .locahost, localhost
+
+# Conf do TIMEZONE
+LANGUAGE_CODE='pt-BR'
+TIME_ZONE='America/Sao_Paulo'
+
+# Conf do Email para Testes
+EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend
+EMAIL_HOST=localhost
+EMAIL_PORT=25
+EMAIL_USE_TLS=False
+EMAIL_HOST_USER=
+EMAIL_HOST_PASSWORD=
+
+# Conf do Email para Produção
+#EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
+#EMAIL_HOST=
+#EMAIL_PORT=
+#EMAIL_USE_TLS=
+#EMAIL_HOST_USER=
+#EMAIL_HOST_PASSWORD=
