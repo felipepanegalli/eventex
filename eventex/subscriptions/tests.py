@@ -99,16 +99,6 @@ class SubscribeInvalidPostTest(TestCase):
         self.assertTrue(form.errors)
 
 
-class SubscribeSuccessMessage(TestCase):
-    def setUp(self):
-        data = dict(name="Felipe Panegalli", cpf="12312312345", email="felipe.panegalli@gmail.com",
-                    phone="12-12345-1234")
-        self.response = self.client.post("/inscricao/", data, follow=True)
-
-    def test_message(self):
-        self.assertContains(self.response, 'Inscrição realizada com sucesso!')
-
-
 class SubscriptionModelTest(TestCase):
     def setUp(self):
         self.obj = Subscription(
