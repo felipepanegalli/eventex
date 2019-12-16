@@ -115,3 +115,6 @@ class SubscriptionModelTest(TestCase):
 
     def test_create(self):
         self.assertTrue(Subscription.objects.exists())
+
+    def test_paid_default_to_false(self):
+        self.assertEqual(False, self.obj.paid)
