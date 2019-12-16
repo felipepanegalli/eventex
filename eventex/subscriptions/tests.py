@@ -2,11 +2,12 @@ from django.core import mail
 from django.test import TestCase
 from eventex.subscriptions.forms import SubscriptionForm
 from eventex.subscriptions.model import Subscription
+from django.shortcuts import resolve_url as r
 
 
 class SubscribeTest(TestCase):
     def setUp(self):
-        self.response = self.client.get("/inscricao/")
+        self.response = self.client.get(r('subscriptions:new'))
 
     def test_get(self):
         """GET /inscricao/ must return status code 200"""
@@ -40,11 +41,11 @@ class SubscribeTest(TestCase):
         self.assertContains(self.response, 'type="submit"')
 
 
-class SubscribePostTest(TestCase):
+class SubscribeNewTest(TestCase):
     def setUp(self):
         data = dict(name="Felipe Panegalli", cpf="12312312345", email="felipe.panegalli@gmail.com",
                     phone="12-12345-1234")
-        self.response = self.client.post("/inscricao/", data)
+        self.response = self.client.post(r('subscriptions:new'), data)
 
     def test_post(self):
         """Valid POST should redirect to /inscricao/"""
@@ -77,9 +78,9 @@ class SubscribePostTest(TestCase):
         self.assertIn('12-12345-1234', email.body)
 
 
-class SubscribeInvalidPostTest(TestCase):
+class SubscribeInvalidNewTest(TestCase):
     def setUp(self):
-        self.response = self.client.post("/inscricao/", {})
+        self.response = self.client.post(r('subscriptions:new'), {})
 
     def test_post(self):
         """Invalid POST should not redirect"""
