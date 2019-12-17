@@ -5,3 +5,6 @@
     {% endfor %}
 </h4>
 <p>{{ talk.description }}</p>
+{% if talk.slots %}
+    <p>Quantidade de vagas: {{ talk.slots }}</p>
+{% endif %}
