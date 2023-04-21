@@ -5,7 +5,7 @@ gunicorn==19.9.0
 psycopg2==2.8.4
 python-decouple==3.1
 pytz==2019.3
-sqlparse==0.3.0
+sqlparse==0.4.4
 static3==0.7.0
 django-extensions==2.2.5
 django-test-without-migrations==0.6
